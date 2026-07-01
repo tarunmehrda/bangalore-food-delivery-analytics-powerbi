@@ -117,7 +117,16 @@ A food-delivery operator in Bangalore needs to understand **where revenue comes 
 
 ## 📸 Dashboard Preview
 
-> 📌 Add your screenshots to `assets/screenshots/` using the filenames below and they'll appear here.
+<div align="center">
+
+<img src="assets/preview.svg" alt="SaffronMetrics dashboard preview" width="100%"/>
+
+<sub>↑ Design preview in the Indigo Noir theme. Replace the grid below with your real page screenshots.</sub>
+
+</div>
+
+### 🖼️ Your dashboard pages
+> 📌 Capture each page in Power BI Desktop (`Win + Shift + S`) and save into `assets/screenshots/` with the exact filenames below — they'll appear here automatically.
 
 | Executive Overview | Restaurant Performance |
 |:---:|:---:|
