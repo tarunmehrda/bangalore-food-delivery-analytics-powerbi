@@ -129,6 +129,15 @@ em{font-style:normal;color:var(--mut);font-weight:500;font-size:.62em}
 .mk-donut::before{content:"";position:absolute;inset:0;margin:auto;width:96px;height:96px;border-radius:50%;
   background:conic-gradient(#6C4AE0 0 45%,#3A8FE0 45% 72%,#CBB894 72% 100%);-webkit-mask:radial-gradient(circle 30px at center,transparent 98%,#000 100%);mask:radial-gradient(circle 30px at center,transparent 98%,#000 100%)}
 .note{text-align:center;color:var(--mut);font-size:.88rem;margin-top:18px}
+.note a{color:var(--blue)}
+
+/* ---------- Live charts ---------- */
+.charts-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.chart-card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:22px;transition:border-color .3s}
+.chart-card:hover{border-color:var(--indigo)}
+.chart-card h3{font-size:1.02rem;margin-bottom:16px}
+.chart-body{position:relative;height:260px}
+@media(max-width:820px){.charts-grid{grid-template-columns:1fr}}
 
 /* ---------- Model ---------- */
 .model{position:relative;display:grid;grid-template-columns:1fr 1fr;grid-template-rows:auto auto;gap:60px 120px;max-width:720px;margin:0 auto;place-items:center;padding:20px}

@@ -189,29 +189,20 @@
     </div>
   </section>
 
-  <!-- ============ DASHBOARD PREVIEW ============ -->
+  <!-- ============ LIVE CHARTS ============ -->
   <section class="section" id="preview">
     <div class="section-head reveal">
-      <span class="tag">04 · Preview</span>
-      <h2>Inside the dashboard</h2>
+      <span class="tag">04 · Live Charts</span>
+      <h2>Real data, visualized</h2>
+      <p class="lead">Interactive charts rendered from the actual <b>200,000-order</b> dataset — the same analysis powering the Power BI report. Hover any chart.</p>
     </div>
-    <div class="mockup reveal" data-tilt>
-      <div class="mockup-bar"><i></i><i></i><i></i><span>SaffronMetrics — Executive Overview</span></div>
-      <div class="mockup-body">
-        <aside class="mk-side">
-          <div class="mk-logo">◆</div>
-          <div class="mk-slice"></div><div class="mk-slice"></div><div class="mk-slice"></div><div class="mk-slice"></div>
-        </aside>
-        <div class="mk-main">
-          <div class="mk-kpis"><div></div><div></div><div></div><div></div></div>
-          <div class="mk-charts">
-            <div class="mk-bars"><b style="height:60%"></b><b style="height:85%"></b><b style="height:45%"></b><b style="height:95%"></b><b style="height:70%"></b><b style="height:55%"></b></div>
-            <div class="mk-donut"></div>
-          </div>
-        </div>
-      </div>
+    <div class="charts-grid">
+      <div class="chart-card reveal"><h3>📈 Cumulative Revenue (₹M)</h3><div class="chart-body"><canvas id="cRevenue"></canvas></div></div>
+      <div class="chart-card reveal"><h3>🍩 Order Status</h3><div class="chart-body"><canvas id="cStatus"></canvas></div></div>
+      <div class="chart-card reveal"><h3>📍 Orders by Location</h3><div class="chart-body"><canvas id="cLocation"></canvas></div></div>
+      <div class="chart-card reveal"><h3>🍛 Popular Cuisines</h3><div class="chart-body"><canvas id="cCuisine"></canvas></div></div>
     </div>
-    <p class="note reveal">Swap this mockup for your real screenshots — see <code>assets/screenshots/</code> in the repo.</p>
+    <p class="note reveal">For the full interactive dashboard, <a href="https://github.com/tarunmehrda/bangalore-food-delivery-analytics-powerbi/raw/main/report/Restaurant.pbix">download the .pbix</a> and open it in Power BI Desktop.</p>
   </section>
 
   <!-- ============ DATA MODEL ============ -->
@@ -269,7 +260,9 @@
 
   <!-- Dependencies -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
   <script src="js/hero.js" defer></script>
   <script src="js/main.js" defer></script>
+  <script src="js/charts.js" defer></script>
 </body>
 </html>
