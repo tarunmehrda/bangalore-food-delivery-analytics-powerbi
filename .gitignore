@@ -1,0 +1,19 @@
+# Power BI unpacked source folder — the packed report/Restaurant.pbix is the one we ship
+Restaurant.pbix/
+
+# Power BI temp / autosave
+*.tmp
+*.pbix.tmp
+~$*
+
+# OS junk
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor
+.vscode/
+.idea/
+
+# Scratch
+scratchpad/

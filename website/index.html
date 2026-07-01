@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="SaffronMetrics — an interactive Power BI dashboard analyzing 200,000+ food-delivery orders across Bangalore restaurants." />
+  <title>SaffronMetrics · Bangalore Food-Delivery Analytics</title>
+
+  <!-- Fonts (dependency: Google Fonts) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <!-- Animated aurora background -->
+  <div class="aurora" aria-hidden="true"><span></span><span></span><span></span></div>
+
+  <!-- ============ NAV ============ -->
+  <header class="nav" id="nav">
+    <a href="#top" class="brand">
+      <span class="brand-dot"></span> Saffron<b>Metrics</b>
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="#overview">Overview</a>
+      <a href="#metrics">Metrics</a>
+      <a href="#insights">Insights</a>
+      <a href="#model">Model</a>
+      <a href="#pages">Pages</a>
+      <a href="https://github.com/tarunmehrda/bangalore-food-delivery-analytics-powerbi" class="btn btn-ghost" target="_blank" rel="noopener">GitHub ↗</a>
+    </nav>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <!-- ============ HERO ============ -->
+  <section class="hero" id="top">
+    <canvas id="hero-canvas" aria-hidden="true"></canvas>
+    <div class="hero-inner reveal">
+      <p class="eyebrow">POWER BI · DATA STORYTELLING</p>
+      <h1 class="hero-title">
+        <span class="grad">SaffronMetrics</span><br />
+        Bangalore Food-Delivery Analytics
+      </h1>
+      <p class="hero-sub">
+        Turning <b>200,000</b> delivery orders across <b>56,000+</b> restaurants
+        into an interactive, executive-grade dashboard — star-schema model,
+        50+ DAX measures, and a custom dark UI.
+      </p>
+      <div class="hero-cta">
+        <a class="btn btn-primary" href="https://github.com/tarunmehrda/bangalore-food-delivery-analytics-powerbi/raw/main/report/Restaurant.pbix">⬇ Download Report (.pbix)</a>
+        <a class="btn btn-ghost" href="#overview">Explore the story ↓</a>
+      </div>
+
+      <div class="hero-chips">
+        <div class="chip" data-tilt><b>₹164.9M</b><span>Revenue</span></div>
+        <div class="chip" data-tilt><b>44.5<i>m</i></b><span>Avg Delivery</span></div>
+        <div class="chip" data-tilt><b>20K</b><span>Customers</span></div>
+        <div class="chip" data-tilt><b>3.70★</b><span>Avg Rating</span></div>
+      </div>
+    </div>
+    <div class="scroll-hint" aria-hidden="true"><span></span></div>
+  </section>
+
+  <!-- ============ TECH MARQUEE ============ -->
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee-track">
+      <span>Power Query (M)</span><span>•</span><span>DAX</span><span>•</span><span>Star Schema</span><span>•</span>
+      <span>Time Intelligence</span><span>•</span><span>What-If Parameters</span><span>•</span><span>Row-Level Security</span><span>•</span>
+      <span>AI Visuals</span><span>•</span><span>Drill-through</span><span>•</span>
+      <span>Power Query (M)</span><span>•</span><span>DAX</span><span>•</span><span>Star Schema</span><span>•</span>
+      <span>Time Intelligence</span><span>•</span><span>What-If Parameters</span><span>•</span><span>Row-Level Security</span><span>•</span>
+      <span>AI Visuals</span><span>•</span><span>Drill-through</span><span>•</span>
+    </div>
+  </div>
+
+  <!-- ============ OVERVIEW ============ -->
+  <section class="section" id="overview">
+    <div class="section-head reveal">
+      <span class="tag">01 · Overview</span>
+      <h2>The full BI lifecycle, in one product</h2>
+      <p class="lead">Built on enriched <b>Zomato Bangalore</b> data plus a synthetic 200K-row orders fact table (Jan 2023 – Sep 2025). From messy source rows to a decision-ready dashboard.</p>
+    </div>
+    <div class="grid grid-4">
+      <article class="card reveal" data-tilt>
+        <div class="card-ico">🧹</div>
+        <h3>Clean</h3>
+        <p>Power Query parses dirty <code>rate</code> text, strips cost separators, and deduplicates 56K rows to one per restaurant.</p>
+      </article>
+      <article class="card reveal" data-tilt>
+        <div class="card-ico">🧱</div>
+        <h3>Model</h3>
+        <p>A single-fact star schema with single-direction filters and a marked date table.</p>
+      </article>
+      <article class="card reveal" data-tilt>
+        <div class="card-ico">🧮</div>
+        <h3>Measure</h3>
+        <p>50+ DAX measures — KPIs, time intelligence, what-if & field parameters, a calculation group.</p>
+      </article>
+      <article class="card reveal" data-tilt>
+        <div class="card-ico">🎨</div>
+        <h3>Design</h3>
+        <p>A hand-built "Indigo Noir" dark theme with sparkline KPIs and drill-through.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- ============ METRICS ============ -->
+  <section class="section" id="metrics">
+    <div class="section-head reveal">
+      <span class="tag">02 · Key Metrics</span>
+      <h2>Numbers that matter <em>(from the real data)</em></h2>
+    </div>
+    <div class="grid grid-4 metrics">
+      <div class="metric reveal" data-tilt>
+        <div class="metric-val"><span data-count="164.9" data-suffix="M" data-prefix="₹" data-dec="1"></span></div>
+        <div class="metric-label">Total Revenue</div>
+      </div>
+      <div class="metric reveal" data-tilt>
+        <div class="metric-val"><span data-count="200000" data-suffix=""></span></div>
+        <div class="metric-label">Total Orders</div>
+      </div>
+      <div class="metric reveal" data-tilt>
+        <div class="metric-val"><span data-count="825" data-prefix="₹"></span></div>
+        <div class="metric-label">Avg Order Value</div>
+      </div>
+      <div class="metric reveal" data-tilt>
+        <div class="metric-val"><span data-count="44.5" data-suffix=" min" data-dec="1"></span></div>
+        <div class="metric-label">Avg Delivery Time</div>
+      </div>
+      <div class="metric reveal" data-tilt>
+        <div class="metric-val ok"><span data-count="80.1" data-suffix="%" data-dec="1"></span></div>
+        <div class="metric-label">Delivered</div>
+      </div>
+      <div class="metric reveal" data-tilt>
+        <div class="metric-val warn"><span data-count="9.9" data-suffix="%" data-dec="1"></span></div>
+        <div class="metric-label">Delayed</div>
+      </div>
+      <div class="metric reveal" data-tilt>
+        <div class="metric-val bad"><span data-count="10" data-suffix="%"></span></div>
+        <div class="metric-label">Cancelled</div>
+      </div>
+      <div class="metric reveal" data-tilt>
+        <div class="metric-val"><span data-count="56250"></span></div>
+        <div class="metric-label">Restaurants</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ INSIGHTS ============ -->
+  <section class="section" id="insights">
+    <div class="section-head reveal">
+      <span class="tag">03 · Key Insights</span>
+      <h2>What the data revealed</h2>
+    </div>
+    <div class="grid grid-3">
+      <article class="card glow reveal" data-tilt>
+        <div class="card-ico">🚨</div>
+        <h3>48% breach the SLA</h3>
+        <p>Nearly half of all orders exceed the 45-minute delivery target — the single biggest operational lever.</p>
+      </article>
+      <article class="card reveal" data-tilt>
+        <div class="card-ico">🍛</div>
+        <h3>North Indian & Chinese lead</h3>
+        <p>21K and 15.5K listings respectively, ahead of South Indian, Fast Food, and Biryani.</p>
+      </article>
+      <article class="card reveal" data-tilt>
+        <div class="card-ico">📍</div>
+        <h3>BTM · HSR · Koramangala</h3>
+        <p>The top three delivery hotspots by order volume across the city.</p>
+      </article>
+      <article class="card reveal" data-tilt>
+        <div class="card-ico">💳</div>
+        <h3>₹825 average basket</h3>
+        <p>Across ~10 orders per customer, with a 10% cancellation rate weighing on revenue.</p>
+      </article>
+      <article class="card reveal" data-tilt>
+        <div class="card-ico">⭐</div>
+        <h3>3.70 / 5 avg rating</h3>
+        <p>At an average cost of ₹555 for two — a value-heavy, price-sensitive market.</p>
+      </article>
+      <article class="card reveal" data-tilt>
+        <div class="card-ico">🔁</div>
+        <h3>20K active customers</h3>
+        <p>Repeat-heavy behaviour over a 2.7-year window powers cohort and retention analysis.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- ============ DASHBOARD PREVIEW ============ -->
+  <section class="section" id="preview">
+    <div class="section-head reveal">
+      <span class="tag">04 · Preview</span>
+      <h2>Inside the dashboard</h2>
+    </div>
+    <div class="mockup reveal" data-tilt>
+      <div class="mockup-bar"><i></i><i></i><i></i><span>SaffronMetrics — Executive Overview</span></div>
+      <div class="mockup-body">
+        <aside class="mk-side">
+          <div class="mk-logo">◆</div>
+          <div class="mk-slice"></div><div class="mk-slice"></div><div class="mk-slice"></div><div class="mk-slice"></div>
+        </aside>
+        <div class="mk-main">
+          <div class="mk-kpis"><div></div><div></div><div></div><div></div></div>
+          <div class="mk-charts">
+            <div class="mk-bars"><b style="height:60%"></b><b style="height:85%"></b><b style="height:45%"></b><b style="height:95%"></b><b style="height:70%"></b><b style="height:55%"></b></div>
+            <div class="mk-donut"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <p class="note reveal">Swap this mockup for your real screenshots — see <code>assets/screenshots/</code> in the repo.</p>
+  </section>
+
+  <!-- ============ DATA MODEL ============ -->
+  <section class="section" id="model">
+    <div class="section-head reveal">
+      <span class="tag">05 · Data Model</span>
+      <h2>A clean star schema</h2>
+    </div>
+    <div class="model reveal">
+      <div class="dim dim-1" data-tilt><b>DateTable</b><span>1,001 rows</span></div>
+      <div class="dim dim-2" data-tilt><b>Restaurants</b><span>56,250 rows</span></div>
+      <div class="fact" data-tilt><b>Orders</b><span>200,000 rows · FACT</span></div>
+      <div class="dim dim-3" data-tilt><b>Customers</b><span>20,000 rows</span></div>
+      <svg class="model-lines" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
+        <line x1="50" y1="50" x2="18" y2="14"/><line x1="50" y1="50" x2="82" y2="14"/>
+        <line x1="50" y1="50" x2="18" y2="86"/><line x1="50" y1="50" x2="82" y2="86"/>
+      </svg>
+    </div>
+  </section>
+
+  <!-- ============ PAGES ============ -->
+  <section class="section" id="pages">
+    <div class="section-head reveal">
+      <span class="tag">06 · Report Pages</span>
+      <h2>Six pages, one story</h2>
+    </div>
+    <div class="grid grid-3">
+      <article class="page-card reveal" data-tilt><span>01</span><h3>Executive Overview</h3><p>Headline KPIs, revenue vs prior year, order-status mix.</p></article>
+      <article class="page-card reveal" data-tilt><span>02</span><h3>Restaurant Performance</h3><p>Cuisine & location performance, rating vs cost.</p></article>
+      <article class="page-card reveal" data-tilt><span>03</span><h3>Delivery & Operations</h3><p>Delivery-time trends, late-SLA, cancellations.</p></article>
+      <article class="page-card reveal" data-tilt><span>04</span><h3>Customer Analytics</h3><p>New vs returning, repeat behaviour, city split.</p></article>
+      <article class="page-card reveal" data-tilt><span>05</span><h3>Advanced Insights</h3><p>AI visuals — Q&A, key drivers, decomposition.</p></article>
+      <article class="page-card reveal" data-tilt><span>06</span><h3>Restaurant 360</h3><p>Drill-through detail for any single restaurant.</p></article>
+    </div>
+  </section>
+
+  <!-- ============ CTA ============ -->
+  <section class="section cta-section">
+    <div class="cta reveal" data-tilt>
+      <h2>Explore the full project</h2>
+      <p>Download the report, read the DAX library, and dive into the design system.</p>
+      <div class="hero-cta">
+        <a class="btn btn-primary" href="https://github.com/tarunmehrda/bangalore-food-delivery-analytics-powerbi" target="_blank" rel="noopener">View on GitHub ↗</a>
+        <a class="btn btn-ghost" href="https://github.com/tarunmehrda/bangalore-food-delivery-analytics-powerbi/raw/main/report/Restaurant.pbix">Download .pbix</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="brand"><span class="brand-dot"></span> Saffron<b>Metrics</b></div>
+    <p>Built with Power BI · Designed &amp; documented by <a href="https://github.com/tarunmehrda" target="_blank" rel="noopener">@tarunmehrda</a></p>
+    <p class="muted">© <span id="year"></span> · Bangalore Food-Delivery Analytics</p>
+  </footer>
+
+  <!-- Dependencies -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="js/hero.js" defer></script>
+  <script src="js/main.js" defer></script>
+</body>
+</html>
